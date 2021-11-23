@@ -107,7 +107,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 int add(int value1, int value2, int value3 = 10, int value4 = 35)
 {
     ignoreUnused(value1, value2, value3, value4);
-    return{};
+    return {};
 }
 /*
  2)
@@ -115,7 +115,7 @@ int add(int value1, int value2, int value3 = 10, int value4 = 35)
 bool isDivisible(double numerator, double denominator = 10.5)
 {
     ignoreUnused(numerator, denominator);
-    return{};
+    return {};
 }
 
 /*
@@ -124,7 +124,7 @@ bool isDivisible(double numerator, double denominator = 10.5)
  int doHomework(int numProblems = 10, bool isCorrect = false, int numPages = 5)
  {
     ignoreUnused(numProblems, isCorrect, numPages);
-    return{};
+    return {};
  }
 /*
  4)
@@ -132,7 +132,7 @@ bool isDivisible(double numerator, double denominator = 10.5)
 bool makeTea(bool haveTea, char teaType = 'g', int numCups = 1)
 {
     ignoreUnused(haveTea, teaType, numCups);
-    return{};
+    return {};
 }
 
 /*
@@ -141,7 +141,7 @@ bool makeTea(bool haveTea, char teaType = 'g', int numCups = 1)
 float filterAudio(float filterFrequency, float filterGain, float filterQ)
 {
     ignoreUnused(filterFrequency, filterGain, filterQ);
-    return{};
+    return {};
 }
 
 /*
@@ -158,16 +158,16 @@ void makeSandwich(bool meat, bool cheese, bool mustard, int numSlices = 2, char 
 bool turnInProject(char projectType)
 {
     ignoreUnused(projectType);
-    return{};
+    return {};
 }
 
 /*
  8)
  */
-bool isPassing(float studentGrade = 95.09f, char studentLetterGrade = 'A')
+bool studentIsPassing(float studentGrade = 95.09f, char studentLetterGrade = 'A')
 {
     ignoreUnused(studentGrade, studentLetterGrade);
-    return{};
+    return {};
 }
 
 /*
@@ -184,7 +184,7 @@ bool isPassing(float studentGrade = 95.09f, char studentLetterGrade = 'A')
 bool addReverb(float reverbLength, float reverbMix = 20.f)
 {
     ignoreUnused(reverbLength, reverbMix);
-    return{};
+    return {};
 }
 
 /*
@@ -207,27 +207,37 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto sum = add(2, 4, 6, 8);
     
     //2)
-    
+    auto divisible = isDivisible(20.5, 10.25);
+
     //3)
-    
+    auto homeworkInfo = doHomework(5, true, 1);
+
     //4)
-    
+    auto makeBlackTea = makeTea(true, 'b', 2);
+
     //5)
-    
+    auto lowCutFilter = filterAudio(80.f, 0.f, 1.12f);
+
     //6)
+    makeSandwich(true, true, false, 2, 'w');
     
     //7)
-    
+    auto projectCompleted = turnInProject('p');
+
     //8)
-    
+    auto studentPassedClass = studentIsPassing(85.95f, 'B');
+
     //9)
+    playDvd('a', 2.35f, true);
     
     //10)
+    auto addedReverb = addReverb(1.25f, 10.f);
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, sum, divisible, homeworkInfo, makeBlackTea, lowCutFilter, makeSandwich, projectCompleted, studentPassedClass, playDvd, addedReverb);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
