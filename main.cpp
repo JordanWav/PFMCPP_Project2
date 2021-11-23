@@ -15,11 +15,12 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
- 
- 
- 
+int
+float
+bool
+double
+char
+unsigned int
  
  
  
@@ -59,10 +60,34 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+
+    int slices = 8;
+    int doors = 2;
+    int boxes = 4;
+
+    float grade = 90.5f;
+    float average = 0.5f;
+    float score = 2.f;
+
+    bool isEven = true;
+    bool isOnline = true;
+    bool isConnected = false;
+
+    double value = 50.25;
+    double volume = 5.5;
+    double component = 2.6534;
+
+    char letterGrade = 'A';
+    char last = 'z';
+    char failing = 'F';
+
+    unsigned int x = 0;
+    unsigned int y = 5;
+    unsigned int z = 20;
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, slices, doors, boxes, grade, average, score, isEven, isOnline, isConnected, value, volume, component, letterGrade, last, failing, x, y, z); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -77,44 +102,90 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) 
  */
-
+int add(int value1, int value2, int value3 = 10, int value4 = 35)
+{
+    ignoreUnused(value1, value2, value3, value4);
+    return{};
+}
 /*
  2)
  */
+bool isDivisible(double numerator, double denominator = 10.5)
+{
+    ignoreUnused(numerator, denominator);
+    return{};
+}
 
 /*
  3)
  */
-
+ int doHomework(int numProblems = 10, bool isCorrect = false, int numPages = 5)
+ {
+    ignoreUnused(numProblems, isCorrect, numPages);
+    return{};
+ }
 /*
  4)
  */
+bool makeTea(bool haveTea, char teaType = 'g', int numCups = 1)
+{
+    ignoreUnused(haveTea, teaType, numCups);
+    return{};
+}
 
 /*
  5)
  */
+float filterAudio(float filterFrequency, float filterGain, float filterQ)
+{
+    ignoreUnused(filterFrequency, filterGain, filterQ);
+    return{};
+}
 
 /*
  6)
  */
+void makeSandwich(bool meat, bool cheese, bool mustard, int numSlices = 2, char breadType = 'w')
+{
+    ignoreUnused(meat, cheese, mustard, numSlices, breadType);
+}
 
 /*
  7)
  */
+bool turnInProject(char projectType)
+{
+    ignoreUnused(projectType);
+    return{};
+}
 
 /*
  8)
  */
+bool isPassing(float studentGrade = 95.09f, char studentLetterGrade = 'A')
+{
+    ignoreUnused(studentGrade, studentLetterGrade);
+    return{};
+}
 
 /*
  9)
  */
+ void playDvd(char movieGenre, float movieLength, bool isDvd = true)
+ {
+    ignoreUnused (movieGenre, movieLength, isDvd);
+ }
 
 /*
  10)
  */
+bool addReverb(float reverbLength, float reverbMix = 20.f)
+{
+    ignoreUnused(reverbLength, reverbMix);
+    return{};
+}
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
